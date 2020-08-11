@@ -1,5 +1,5 @@
-export default function changeHeader() {
-  
+//Выбираем цвет шапки для каждого слайда
+let changeHeader = () => {
   $('.js__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     let imageClass = $(".slick-active img");
     let header = $(".header__content");
@@ -13,4 +13,16 @@ export default function changeHeader() {
       header.removeClass('_dark _gradient')
     }
   });
+}
+
+//Выбираем цвет шапки для разных страниц
+let changeMobileHeader = () => {
+  if($("div").is(".js__slider")) {
+  $(".header__content").addClass('_black');
+  }
+}
+
+export default function initHeader() {
+  changeHeader();
+  changeMobileHeader();
 }

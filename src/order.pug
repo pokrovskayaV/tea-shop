@@ -1,0 +1,68 @@
+- const products = [ {src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }]
+
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body
+    .order._container
+      .order__header.header-order
+        a(href="index.html").header-order__title Фетч
+        .header-order__title._circle Оформление заказа
+      .order__main.main-order
+        .main-order__items
+          .main-order__content
+            for product in products
+              .main-order__product.product__item
+                img(class="item__image" src=product.src, alt=product.name)
+                .main-order__description.product__description
+                  a(href="item.html").product__title=product.name
+                  span.product__type=product.type
+                  span.product__price=product.price
+            .main-order__sum
+              .main-order__price 276 000 ₽
+              span Доставка бесплатно
+        .main-order__form.form-block
+          form(action="#", method="get")
+            .form-block__field
+              label.form-block__label(for="email") Эл. почта
+              .form-block__email
+                input.form-block__input(id = "email" type="email" name="email"   placeholder="petrov@yandex.ru")
+                span.form-block__text Пришлём чеки и трек-номер
+            .form-block__field
+              label.form-block__label(for="tel") Телефон
+              .form-block__tel
+                input.form-block__input(id = "tel" type="tel" name="tel" placeholder="+7 999 275-12-37"  pattern="2[0-9]{3}-[0-9]{3}")
+                span.form-block__text  Менеджер позвонит, чтобы подтвердить заказ
+            .form-block__field
+              label.form-block__label(for="city") Город
+              input.form-block__input(id = "city" type="text" name="city" placeholder="Москва")
+            .form-block__field
+              label.form-block__label(for="address") Адрес
+              textarea.form-block__input(id = "address" name="address" rows="5" cols="22" placeholder="Тимирязевская, 32, квартира 99, вход со двора")
+            .form-block__field.btn-block
+              .btn-block__text 
+                p.btn-block__del Бесплатная доставка курьером. 
+                p.btn-block__pay Оплата картой онлайн.     
+              button(type="submit") Оформить заказ, 276 000 ₽
+      a(href="complete.html") Заказ оформлен
+      .order__footer.footer-order
+        .footer-order__copy © Фетч-команда, 2019
+        span.footer-order__tel 8 800 912-11-42, звонок бесплатный
+        a(href="mailto:shop@fetch.ru").footer-order__mail shop@fetch.ru
+        a.footer-order__rules(class="js__popap" href="#rules") Правила обработки персональных данных
+  
+  .fooret__rules.mfp-hide.white-popup-block(id="rules")
+    h2 Правила обработки персональных данных
+    p Предоставляя свои персональные данные Пользователь даёт согласие на&nbsp;  обработку, хранение и&nbsp;использование своих персональных данных на&nbsp;  основании ФЗ&nbsp;&#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo;   от&nbsp;<br>27.07.2006 г. в&nbsp;следующих целях:
+    ul 
+      li Осуществление клиентской поддержки;
+      li Получения Пользователем информации о&nbsp;маркетинговых событиях;
+      li Проведения аудита и&nbsp;внутренних исследований с&nbsp;целью <br>   повышения качества предоставляемых услуг.
+    p Под персональными данными подразумевается любая информация личного   характера, позволяющая установить личность Пользователя, такая как:
+    span Фамилия, имя и отчество
+    p Персональные данные Пользователей хранятся исключительно <br> на&nbsp;  электронных носителях и&nbsp;обрабатываются с&nbsp;использованием   автоматизированных систем, за&nbsp;исключением случаев, когда   неавтоматизированная обработка персональных данных необходима в&nbsp;связи с&  nbsp;исполнением требований законодательства.
+    p Компания обязуется не&nbsp;передавать полученные персональные данные третьим   лицам, за&nbsp;исключением следующих случаев:
+    p По&nbsp;запросам уполномоченных органов государственной власти РФ&nbsp;  только по&nbsp;основаниям и&nbsp;в&nbsp;порядке, установленным   законодательством РФ
+    p Компания оставляет за&nbsp;собой право вносить изменения в&nbsp;  одностороннем порядке в&nbsp;настоящие правила, при условии, что изменения не&nbsp;противоречат действующему законодательству РФ. Изменения условий   настоящих правил вступают в&nbsp;силу после их&nbsp;публикации на&nbsp;Сайте.
+
+  include blocks/scripts.pug

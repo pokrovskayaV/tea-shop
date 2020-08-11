@@ -1,0 +1,28 @@
+- const products = [ {src:"/img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" } ]
+
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body
+    include blocks/header.pug  
+    .complete._container
+      .complete__content
+        .complete__title Заказ №213 оформлен
+        .complete__text
+          p Скоро вам позвонит менеджер, чтобы подтвердить заказ.
+          a(href="index.html") Вернуться на главную
+          span или
+          a(href="catalog.html") продолжить покупки в каталоге.
+      .complete__recommend.item__slider-title Вам может быть интересно
+      .complete__slider.item__slider-recommend
+        .js__slider-recommend
+            for product in products
+              .product__item
+                img(class="item__image" src=product.src, alt=product.name)
+                .product__description
+                  a(href="item.html").product__title=product.name
+                  span.product__type=product.type
+                  span.product__price=product.price       
+
+    include blocks/footer.pug
+    include blocks/scripts.pug

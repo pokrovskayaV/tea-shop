@@ -1,0 +1,26 @@
+-let n = 2;
+- const products = [ { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{ src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{ src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" } ]
+
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body
+    include blocks/header.pug  
+    .catalog
+      .catalog__container._container
+        .catalog__title Обувь
+        .catalog__content
+          for product in products
+            .catalog__item.product__item
+              img(class="item__image js-lazy", data-src=product.src, alt=product.name)
+              .product__description
+                a(href="item.html").product__title=product.name
+                span.product__type=product.type
+                span.product__price=product.price
+        .catalog__navigation 
+          p Страницы
+          a(class="catalog__page-number _active" href="#") 1
+          while n<13
+            a(class="catalog__page-number" href="#")=n++  
+    include blocks/footer.pug
+    include blocks/scripts.pug

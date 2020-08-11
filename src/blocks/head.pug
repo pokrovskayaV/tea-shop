@@ -1,0 +1,16 @@
+- const widths = [ { value:"1199px" }, { value:"904px" }, { value:"800px" }, { value:"765px" }, { value:"600px" }, { value:"675px" }, { value:"649px" }, { value:"550px" }, { value:"480px" }, { value:"435px" }, { value:"330px" }]
+
+head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="Оффлайн-магазин репродукций шедевров мирового искусства")
+    title Фетч
+    link(rel="stylesheet" href="/css/style.css" type="text/css")
+    link(rel="icon" href="img/icons/favicon.svg")
+    for width in widths
+      link(media=`(max-width:${width.value})` href="/css/style.css" rel="stylesheet" type="text/css")
+    link(media="(min-width:1199px)" rel="stylesheet" href="/css/style.css" type="text/css")
+    link(rel="stylesheet" type="text/css" href="/css/lib/slick.css")
+    link(rel="stylesheet" type="text/css" href="/css/lib/magnific-popup.css")
+    link(rel="preload" href="fonts/pt_sans_regular.woff2" as="font" crossorigin)
+    link(rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin)

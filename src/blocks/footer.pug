@@ -1,10 +1,10 @@
 footer.footer
   .footer__container._container
-    .footer__catalog
-      ul.footer__info 
-        a(href="#").main-page Фетч
+    .footer__catalog.catalog-block
+      ul.catalog-block__info 
+        a(href="index.html").main-page Фетч
         li
-          a(href="") Магазин
+          a(href="about.html") Магазин
         li
           a(href="") Блог
         li
@@ -14,8 +14,8 @@ footer.footer
             a(href="mailto:shop@fetch.ru").footer__mail shop@fetch.ru
             span.footer__tel 8 800 912-11-42
             span.footer__call Звонок бесплатный
-      ul.footer__formen._title 
-        a(href="#") Для мужчин
+      ul.catalog-block__formen
+        a(href="#").catalog-block__title Для мужчин
         li
           a(href="") Верхняя одежда
         li
@@ -26,8 +26,8 @@ footer.footer
           a(href="") Брюки и джинсы
         li
           a(href="") Бельё и носки    
-      ul.footer__forwomen._title 
-        a(href="#") Для женщин
+      ul.catalog-block__forwomen
+        a(href="#").catalog-block__title  Для женщин
         li
           a(href="") Верхняя одежда
         li
@@ -38,14 +38,14 @@ footer.footer
           a(href="") Платья и юбки
         li
           a(href="") Бельё и носки  
-      ul.footer__shoes._title 
-        a(href="#") Обувь
+      ul.catalog-block__shoes
+        a(href="catalog.html").catalog-block__title  Обувь
         li
           a(href="") Кроссовки и кеды
         li
           a(href="") Ботинки
-      ul.footer__accessories._title 
-        a(href="#") Аксессуары
+      ul.catalog-block__accessories
+        a(href="#").catalog-block__title  Аксессуары
         li
           a(href="") Сумки и рюкзаки
         li
@@ -54,14 +54,27 @@ footer.footer
           a(href="") Бижутерия
         li
           a(href="") Средства для ухода
-      ul.footer__sale._title 
-        a(href="#") Скидки
+      ul.catalog-block__sale
+        a(href="#").catalog-block__title  Скидки
         li
           a(href="") Летняя распродажа
         li
           a(href="") Коллекция 2018
     .footer__bottom-content
       .footer__copy © Фетч-команда, 2019
-      a(href="#").footer__rules Правила обработки персональных данных
+      a(class="footer__rules js__popap" href="#rules") Правила обработки персональных данных
       a(href="#").footer__dev Разработка и поддержка сайта
   
+  .mfp-hide.white-popup-block(id="rules")
+    h2 Правила обработки персональных данных
+    p Предоставляя свои персональные данные Пользователь даёт согласие на&nbsp;  обработку, хранение и&nbsp;использование своих персональных данных на&nbsp;  основании ФЗ&nbsp;&#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo;   от&nbsp;<br>27.07.2006 г. в&nbsp;следующих целях:
+    ul 
+      li Осуществление клиентской поддержки;
+      li Получения Пользователем информации о&nbsp;маркетинговых событиях;
+      li Проведения аудита и&nbsp;внутренних исследований с&nbsp;целью <br>   повышения качества предоставляемых услуг.
+    p Под персональными данными подразумевается любая информация личного   характера, позволяющая установить личность Пользователя, такая как:
+    span Фамилия, имя и отчество
+    p Персональные данные Пользователей хранятся исключительно <br> на&nbsp;  электронных носителях и&nbsp;обрабатываются с&nbsp;использованием   автоматизированных систем, за&nbsp;исключением случаев, когда   неавтоматизированная обработка персональных данных необходима в&nbsp;связи с&nbsp;исполнением требований законодательства.
+    p Компания обязуется не&nbsp;передавать полученные персональные данные третьим   лицам, за&nbsp;исключением следующих случаев:
+    p По&nbsp;запросам уполномоченных органов государственной власти РФ&nbsp;  только по&nbsp;основаниям и&nbsp;в&nbsp;порядке, установленным   законодательством РФ
+    p Компания оставляет за&nbsp;собой право вносить изменения в&nbsp;  одностороннем порядке в&nbsp;настоящие правила, при условии, что изменения не&nbsp;противоречат действующему законодательству РФ. Изменения условий   настоящих правил вступают в&nbsp;силу после их&nbsp;публикации на&nbsp;Сайте.

@@ -1,6 +1,12 @@
 @import url("header.css");
+@import url("slider.css");
 @import url("main.css");
 @import url("footer.css");
+@import url("catalog.css");
+@import url("item.css");
+@import url("order.css");
+@import url("complete.css");
+@import url("about.css");
 
 @font-face {
   font-display: swap;
@@ -18,11 +24,6 @@
     url("../fonts/PTSans-Bold.woff") format("woff");
 }
 
-:root {
-  --maxwidth: 320px;
-  --minwidth: 1200px;
-}
-
 html,
 body {
   padding: 0;
@@ -35,6 +36,9 @@ body {
 ._container {
   max-width: 1136px;
   margin: 0 auto;
+  @media (max-width: 1199px) { 
+    padding-left:  16px;
+  }
 }
 
 button,
@@ -47,7 +51,7 @@ a {
 }
 
 input,
-textarea {
+textarea, fieldset {
   border: none;
   outline: none;
 }

@@ -1,0 +1,126 @@
+- const products = [ {src:"/img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" } ]
+
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body
+    include blocks/header.pug  
+    .item._container
+      .item__content
+        section.item__description.description
+          h1.description__title Maison Margiela Fusion Low Sneakers
+          span.description__type Кроссовки
+          form.description__form.form(action="#")
+            .form__color-block
+              .form__title Цвет
+              input(type="radio", name="color", id="pink", value="pink" checked)
+              label(for="pink") Белый с розовым
+              input(type="radio", name="color",id="green", value="green")
+              label(for="green") Белый с зеленым          
+            .form__size-block
+              .form__title Размер US
+              input(type="radio", name="size",id="size6", value="size6" checked)
+              label(for="size6") 6
+              input(type="radio", name="size",id="size6,5", value="size6,5")
+              label(for="size6,5") 6,5   
+              input(type="radio", name="size",id="size7", value="size7")
+              label(for="size7") 7
+              input(type="radio", name="size",id="size9", value="size9")
+              label(for="size9") 9              
+            a.form__link(class="js__popap" href="#sizes") Таблица размеров
+            button.form__btn(type="submit") Купить, 92 000 ₽
+          .description__feature
+            .description__material 
+              span Материал
+              p Кожа, текстиль
+            .description__country 
+              span Страна-производитель
+              p Италия
+            .description__text 
+              span Описание
+              p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным   мастерством. 
+              p В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого   материала и текстиля. 
+              p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля   создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и   потеками. 
+              p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике   завершают уникальный внешний вид.
+            .description__details
+              span Детали
+              ul
+                li — Два вида кожи
+                li — Детали из текстиля
+                li — Неординарная шнуровка
+                li — Перфорация на мыске
+                li — Стежок на заднике
+                li — Фигурная резиновая подошва
+                li — Цепкая подметка
+                li — Окрашивание с брызгами и потеками
+                li — Пестрая расцветка
+        section.item__slider.js__slider-item
+          .item__slider-for
+            .js__slider-for
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img1.jpg", alt="")
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img2.jpg", alt="")
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img3.jpg", alt="")
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img4.jpg", alt="")
+          .item__slider-nav
+           .js__slider-nav
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img1min.jpg", alt="")
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img2min.jpg", alt="")
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img3min.jpg", alt="")
+              .item__.product__item
+                img(class="item__image" src="/img/slider-item/img4min.jpg", alt="")
+      
+      h3.item__slider-title Вам может быть интересно
+      .item__slider-recommend
+          .js__slider-recommend
+            for product in products
+              .product__item
+                img(class="item__image" src=product.src, alt=product.name)
+                .product__description
+                  a(href="item.html").product__title=product.name
+                  span.product__type=product.type
+                  span.product__price=product.price       
+    .item__table-block.mfp-hide.white-popup-block(id="sizes")
+        .table-block__title Таблица размеров
+        .table-block
+          table
+            tr
+              th US
+              td 4
+              td 4,5
+              td 5
+              td 5,5
+              td 6
+              td 6,5
+              td 7
+              td 7,5         
+            tr
+              th UK
+              td 3,5
+              td 4
+              td 4,5
+              td 5
+              td 5,5
+              td 6
+              td 6,5
+              td 7
+            tr
+              th EU
+              td 36
+              td 37
+              td 38
+              td 39
+              td 40
+              td 41
+              td 42
+              td 43  
+    include blocks/footer.pug         
+    include blocks/scripts.pug  
+    
+

@@ -1,0 +1,116 @@
+.catalog {  
+  margin-top: 8px;
+  position: relative; 
+     &:before {
+      content: '';
+      height: 160px;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      position: absolute;
+  } 
+  &__title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 41px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+  padding: 24px 0;
+  }
+  &__content {
+   position: relative;
+   z-index: 20;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 8px;
+   max-width: 1100px;
+   @media (max-width: 1199px) { 
+   margin-top: 0;
+   }
+  }
+  .product {
+    &__item {
+    max-width: 240px;
+    margin-right: 0px;
+    margin-bottom: 47px;
+    padding-right: 32px;
+    img {
+      width: 100%;
+    }
+    @media (max-width: 600px) { 
+      width: 130px;
+      padding-right: 20px;
+   }
+  }
+    &__title {
+      width: 170px;
+      display: block;
+      @media (max-width: 600px) { 
+        max-width: 136px;
+        font-size: 13px;
+        line-height: 17px;
+     }
+    }
+  } 
+  &__navigation {
+    display: block;
+    margin: 18px 0 61px 0;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    color: #666666;
+    p {
+      margin: 0 0 5px 0;
+    }
+    @media (max-width: 1199px) { 
+      margin: 18px 0 40px 0;
+     }
+  }
+  &__page-number {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 2px;
+    &._active {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+    }
+    @media (min-width: 1199px) { 
+     &:hover {
+      color:  #4541FE;
+    }
+    }
+  }
+
+}
+.product {
+  &__description {
+    margin-top: 5px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    margin: 0;
+   @media (min-width: 1199px) { 
+    &:hover {
+     color:  #4541FE;
+    }
+   }
+  }
+  &__type {
+   margin: 4px 0 12px 0;
+   display: block; 
+   font-weight: normal; 
+   font-size: 13px;
+   line-height: 17px;
+  }
+  &__price {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+   }
+} 
+        
