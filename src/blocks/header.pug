@@ -17,7 +17,7 @@ header.header
           li.header__item 
             a.header__item-link(href="#" itemprop="url") Доставка и оплата
         .header__shadow
-        .header__order._filled
-          a.header__cart-img(href="order.html")
+        a(href="order.html" itemprop="url").header__order._filled
+          span.header__cart-img
           span.header__cart 4
-          a.header__link-cart(href="order.html" itemprop="url") Оформить заказ
+          span.header__link-cart Оформить заказ
