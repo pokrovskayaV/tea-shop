@@ -43,6 +43,7 @@ let { watch, src, dest, parallel, series } = require("gulp"),
   imagemin = require("gulp-imagemin"),
   webpack = require("webpack-stream"),
   plumber = require("gulp-plumber"),
+  typograf = require('gulp-typograf'),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2");
 
@@ -50,8 +51,10 @@ function buildPages() {
   return src(path.src.pug)
     .pipe(plumber())
     .pipe(pug())
+    .pipe(typograf({ locale: ['ru', 'en-US'] }))
     .pipe(dest(path.build.html));
 }
+
 
 function buildStyles() {
   return src(path.src.scss)

@@ -1,18 +1,11 @@
-//Выбираем цвет шапки для каждого слайда
+//Выбираем цвет шапки для каждого слайда по свайпу или клику на стрелки
 let changeHeader = () => {
-  $('.js__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    let imageClass = $(".slick-active img");
-    let header = $(".header__content");
-    if(imageClass.hasClass('_gradient')) {
-      header.removeClass('_dark');
-      header.addClass('_gradient');
-    } else if(imageClass.hasClass('_dark')){
-      header.removeClass('_gradient');
-      header.addClass('_dark');
-    } else {
-      header.removeClass('_dark _gradient')
-    }
-  });
+ let header = $(".js-menuScroll");
+ let addColorClass = () => {
+    $('.slick-current').hasClass('_gradient') ? header.addClass('_gradient') : header.removeClass('_gradient')
+  }
+  $('.js__slider').on('swipe', addColorClass);
+  $('.slick-arrow').on('click', addColorClass);
 }
 
 //Выбираем цвет шапки для разных страниц

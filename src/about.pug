@@ -3,21 +3,24 @@ html(lang="ru")
   include blocks/head.pug
   body
     include blocks/header.pug  
-    .about._container
+    .about._container(itemscope itemtype="http://schema.org/LocalBusiness")
        h1.about__title О магазине Фетч
        .about__content 
          .about__text 
-           p В магазине Фетч представлено более 100 ведущих мировых производителей одежды и обуви. 
-           p Разнообразие ассортимента обеспечивают товары культовых брендов современности: Barbour, Fred Perry, Norse Projects, Edwin и капсульные коллекции компаний, делающих ставку на эксклюзивность и премиальный статус своей продукции — Stone Island, Polo Ralph Lauren, C.P. Company. 
-           p Приобрести последние можно лишь в нескольких торговых точках по всему миру, включая Фетч.
-           p Особый повод для гордости — обширная подборка редких и культовых кроссовок adidas Originals, Nike, New Balance, ASICS, Reebok и другие.
-         .about__info
-           p.about__address Москва, Тимирязевская, 3
-           a.about__email(href="mailto:shop@fetch.ru") shop@fetch.ru
-           p.about__tel 8 800 912-11-42
-           span Звонок бесплатный
+           p В магазине Фетч представлено более 100 ведущих мировых производителей одежды и обуви.
+           p Разнообразие ассортимента обеспечивают товары культовых брендов современности: Barbour, Fred Perry, Norse Projects, Edwin и капсульные коллекции компаний, делающих ставку на эксклюзивность и премиальный статус своей продукции - Stone Island, Polo Ralph Lauren, C. P. Company.
+           p Приобрести последние можно лишь в нескольких торговых точках по всему миру, включая Фетч.
+           p Особый повод для гордости - обширная подборка редких и культовых кроссовок adidas Originals, Nike, New Balance, ASICS, Reebok и другие.
+         .about__info(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+           p.about__address(itemprop="addressLocality") Москва, Тимирязевская, 3
+           a.about__email(href="mailto:shop@fetch.ru" itemprop="email") shop@fetch.ru
+           p.about__tel(itemprop="telephone") 8 800 912-11-42
+           span.about__call Звонок бесплатный
            p ИНН/КПП: 2901152637 / 290101001 <br> ОГРН: 1062901063576 <br>БИК: 041117601, к/с 30101810100000000601 
            p Расчетный счет: 40702810004000103812 в отделении N8637 <br> Сбербанка России, Архангельск 
-           p Генеральный директор — Василенко Артём Викторович
+           p(itemscope itemtype="http://schema.org/Person") 
+            span(itemprop="jobTitle") Генеральный директор — 
+            span(itemprop="name") Василенко Артём Викторович
            
     include blocks/footer.pug
+    include blocks/scripts.pug

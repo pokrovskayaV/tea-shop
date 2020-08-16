@@ -9,7 +9,7 @@
       font-family: "PTSans-bold";
       font-size: 32px;
       line-height: 41px;
-      &._circle:before{
+      &._circle:after{
         content: '';
         display: inline-block;
         font-size: 32px;
@@ -20,6 +20,9 @@
         margin: 5px 10px;
         background-color: #DDDDDD;
       }
+    }
+    div {
+      white-space: nowrap;
     }
   }
   .main-order {
@@ -99,6 +102,12 @@
         margin-bottom: 30px;
           &:nth-child(3) {
              margin: 40px 0 30px 0;
+             @media (max-width: 904px) { 
+              margin: 25px 0 20px 0;
+            }
+          }
+          @media (max-width: 904px) { 
+            margin-bottom: 15px;
           }
         } 
        &__label {

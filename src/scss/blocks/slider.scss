@@ -11,19 +11,16 @@
     position: absolute;   
     bottom: 50px;
     left: 152px;
+    max-width: 576px;
     display: flex;
     @media (max-width: 800px){ 
       left: 20px;
       bottom: 10px;
-      a {
+      a { 
+        width: 330px;
         font-size: 48px;
         line-height: 62px;
          }
-     }
-    @media (max-width: 649px){ 
-       a {
-      width: 330px;
-       }
      }
      @media (max-width: 330px){ 
       a {

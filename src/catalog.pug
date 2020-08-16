@@ -1,5 +1,5 @@
 -let n = 2;
-- const products = [ { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{ src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{ src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" } ]
+- const products = [ { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" },{ src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" },{src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" },{ src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" }, { src:"img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ', type:"Кроссовки" } ]
 
 doctype html
 html(lang="ru")
@@ -9,14 +9,16 @@ html(lang="ru")
     .catalog
       .catalog__container._container
         .catalog__title Обувь
-        .catalog__content
+        .catalog__content(itemscope itemtype="http://schema.org/ItemList")
           for product in products
-            .catalog__item.product__item
-              img(class="item__image js-lazy", data-src=product.src, alt=product.name)
-              .product__description
-                a(href="item.html").product__title=product.name
-                span.product__type=product.type
-                span.product__price=product.price
+            .catalog__item.product__item(itemscope itemprop="itemListElement" itemtype="http://schema.org/Product")
+              a(href="item.html" itemprop="url")
+                img(itemprop="image" class="item__image js-lazy" data-src=product.src alt=product.name)
+              .product__description(itemscope itemprop="offers" itemtype="http://schema.org/Offer")
+                a(href="item.html" itemprop="url").product__title=product.name
+                span.product__type(itemprop="model")=product.type
+                span.product__price(itemprop="price")=product.price
+                span.product__currency(itemprop="priceCurrency" content="RUB") ₽
         .catalog__navigation 
           p Страницы
           a(class="catalog__page-number _active" href="#") 1

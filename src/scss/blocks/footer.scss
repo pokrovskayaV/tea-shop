@@ -7,18 +7,28 @@
   overflow: hidden;
   &__catalog {
     margin: 32px 0;
-    ul {
-    padding: 15px 15px 5px 0;  
     color: white;
-     @media (min-width: 1199px) { 
-     a:hover {
+    @media (min-width: 1199px) { 
+     a {
+       &:hover {
+       color: #fff;
        opacity: 0.5;
      }
-     a.main-page:hover {
-       opacity: 1;
-       color: #afaef3;
      }
     }
+    a.main-page {
+      font-family: "PTSans-bold";  
+      font-size: 18px;
+      line-height: 23px;
+      @media (min-width: 1199px) { 
+        &:hover {
+          opacity: 1;
+          color: #afaef3;
+        }
+       }
+    }
+    ul {
+    padding: 3px 15px 5px 0;  
     li {
       padding: 6px 0 0 16px;
       &:first-of-type {
@@ -78,9 +88,12 @@
     }
     @media (max-width: 1199px) { 
       flex-wrap: wrap;
-      .footer__rules {
-        margin: 16px 0;
-        }
+    }
+    @media (max-width: 659px) { 
+    flex-direction: column;
+    .footer__rules {
+      margin: 16px 0;
+      }
     }
   }
 }

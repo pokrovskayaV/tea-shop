@@ -8,56 +8,61 @@ html(lang="ru")
      .main__container._container
       section.main__top.main-top
         .main-top__description
-          p <b>Фетч</b> — мультибрендовый магазин модной одежды.
+          p <b>Фетч</b> - мультибрендовый магазин модной одежды.
           p Следим за трендами и часто обновляем ассортимент.
-          p Доставляем по Москве за день, по России — за неделю.
+          p Доставляем по Москве за день, по России - за неделю.
         .main-top__catalog.catalog-block
-          ul.catalog-block__formen
-            a(href="#").catalog-block__title   Для мужчин
-            li
-              a(href="") Верхняя одежда
-            li
-              a(href="") Рубашки и поло
-            li
-              a(href="") Трикотаж
-            li
-              a(href="") Брюки и джинсы
-            li
-              a(href="") Бельё и носки    
-          ul.catalog-block__forwomen
+          .catalog-block__column
+            a(href="#").catalog-block__title Для мужчин
+            ul.catalog-block__formen
+              li
+                a(href="#") Верхняя одежда
+              li
+                a(href="#") Рубашки и поло
+              li
+                a(href="#") Трикотаж
+              li
+                a(href="#") Брюки и джинсы
+              li
+                a(href="#") Бельё и носки    
+          .catalog-block__column
             a(href="#").catalog-block__title Для женщин
-            li
-              a(href="") Верхняя одежда
-            li
-              a(href="") Рубашки и поло
-            li
-              a(href="") Трикотаж
-            li
-              a(href="") Платья и юбки
-            li
-              a(href="") Бельё и носки  
-          ul.catalog-block__shoes
-            a(href="#").catalog-block__title  Обувь
-            li
-              a(href="") Кроссовки и кеды
-            li
-              a(href="") Ботинки
-          ul.catalog-block__accessories
+            ul.catalog-block__forwomen
+              li
+                a(href="#") Верхняя одежда
+              li
+                a(href="#") Рубашки и поло
+              li
+                a(href="#") Трикотаж
+              li
+                a(href="#") Платья и юбки
+              li
+                a(href="#") Бельё и носки  
+          .catalog-block__column
+            a(href="catalog.html").catalog-block__title  Обувь
+            ul.catalog-block__shoes
+              li
+                a(href="#") Кроссовки и кеды
+              li
+                a(href="#") Ботинки
+          .catalog-block__column
             a(href="#").catalog-block__title  Аксессуары
-            li
-              a(href="") Сумки и рюкзаки
-            li
-              a(href="") Часы
-            li
-              a(href="") Бижутерия
-            li
-              a(href="") Средства для ухода
-          ul.catalog-block__sale
+            ul.catalog-block__accessories
+              li
+                a(href="#") Сумки и рюкзаки
+              li
+                a(href="#") Часы
+              li
+                a(href="#") Бижутерия
+              li
+                a(href="#") Средства для ухода
+          .catalog-block__column
             a(href="#").catalog-block__title  Скидки
-            li
-              a(href="") Летняя распродажа
-            li
-              a(href="") Коллекция 2018
+            ul.catalog-block__sale
+              li
+                a(href="#") Летняя распродажа
+              li
+                a(href="#") Коллекция 2018
       section.main__content
         .main__row
           .main__column
@@ -70,11 +75,11 @@ html(lang="ru")
             .main__editor-choice._white
               .main__title
                 a(href="#") Выбор редакции: часы
-                p.main__text ТОП-5 лучших предложений по версии <br>     администрации Фетч
+                p.main__text ТОП-5 лучших предложений по версии 
           .main__column
             .main__collection
               .main__title
-                a Новая коллекция adidas   Originals
+                a Новая коллекция adidas Originals
                 p.main__text Десять крутейших кроссовок
               .main__img
                 img.js-lazy(data-src="../img/adidasOr.png", alt="")

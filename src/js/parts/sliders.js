@@ -12,7 +12,7 @@ let initSlidersItem = () => {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    infinite: false,
+    infinite: true,
     asNavFor: ".js__slider-nav"
   });
   $(".js__slider-nav").slick({
@@ -22,7 +22,8 @@ let initSlidersItem = () => {
     asNavFor: ".js__slider-for",
     dots: false,
     focusOnSelect: true,
-    infinite: false,
+    infinite: true,
+    arrows: false,
     vertical: false,
   });
 };

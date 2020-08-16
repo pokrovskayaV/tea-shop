@@ -1,4 +1,6 @@
-- const products = [ {src:"/img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" }, {src:"/img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" },{src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000 ₽', type:"Кроссовки" } ]
+- const sliderItems = [ {src:"/img/slider-item/img1.jpg", srcmin:"/img/slider-item/img1min.jpg", name:'Maison Margiela Fusion Low Sneakers'}, {src:"/img/slider-item/img2.jpg", srcmin:"/img/slider-item/img2min.jpg", name:'Maison Margiela Fusion Low Sneakers'},{src:"/img/slider-item/img3.jpg", srcmin:"/img/slider-item/img3min.jpg", name:'Maison Margiela Fusion Low Sneakers'},{src:"/img/slider-item/img4.jpg", srcmin:"/img/slider-item/img4min.jpg", name:'Maison Margiela Fusion Low Sneakers'},{src:"/img/slider-item/img3.jpg", srcmin:"/img/slider-item/img3min.jpg", name:'Maison Margiela Fusion Low Sneakers'} ]
+
+- const recommend = [ {src:"/img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" }, {src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" }, {src:"/img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" }, {src:"/img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" },{src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" } ]
 
 doctype html
 html(lang="ru")
@@ -7,9 +9,9 @@ html(lang="ru")
     include blocks/header.pug  
     .item._container
       .item__content
-        section.item__description.description
-          h1.description__title Maison Margiela Fusion Low Sneakers
-          span.description__type Кроссовки
+        section.item__description.description(itemscope itemtype="http://schema.org/Product")
+          h1.description__title(itemprop="name") Maison Margiela Fusion Low Sneakers
+          span.description__type(itemprop="model") Кроссовки
           form.description__form.form(action="#")
             .form__color-block
               .form__title Цвет
@@ -28,8 +30,10 @@ html(lang="ru")
               input(type="radio", name="size",id="size9", value="size9")
               label(for="size9") 9              
             a.form__link(class="js__popap" href="#sizes") Таблица размеров
-            button.form__btn(type="submit") Купить, 92 000 ₽
-          .description__feature
+            button.form__btn(type="submit" itemprop="offers" itemscope itemtype="http://schema.org/Offer") Купить, 
+              span.product__price(itemprop="price") 92 000 
+              span.product__currency(itemprop="priceCurrency" content="RUB") ₽
+          .description__feature(itemprop="description")
             .description__material 
               span Материал
               p Кожа, текстиль
@@ -38,10 +42,10 @@ html(lang="ru")
               p Италия
             .description__text 
               span Описание
-              p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным   мастерством. 
-              p В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого   материала и текстиля. 
-              p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля   создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и   потеками. 
-              p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике   завершают уникальный внешний вид.
+              p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством.
+              p В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля.
+              p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками.
+              p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
             .description__details
               span Детали
               ul
@@ -57,35 +61,26 @@ html(lang="ru")
         section.item__slider.js__slider-item
           .item__slider-for
             .js__slider-for
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img1.jpg", alt="")
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img2.jpg", alt="")
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img3.jpg", alt="")
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img4.jpg", alt="")
+              for item in sliderItems
+               .item__.product__item
+                 img(itemprop="image" class="item__image" src=item.src, alt=item.name)
           .item__slider-nav
            .js__slider-nav
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img1min.jpg", alt="")
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img2min.jpg", alt="")
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img3min.jpg", alt="")
-              .item__.product__item
-                img(class="item__image" src="/img/slider-item/img4min.jpg", alt="")
+              for item in sliderItems
+               .item__.product__item
+                 img(itemprop="image" class="item__image" src=item.srcmin, alt=item.name)
       
       h3.item__slider-title Вам может быть интересно
       .item__slider-recommend
           .js__slider-recommend
-            for product in products
+            for product in recommend
               .product__item
                 img(class="item__image" src=product.src, alt=product.name)
                 .product__description
                   a(href="item.html").product__title=product.name
                   span.product__type=product.type
-                  span.product__price=product.price       
+                  span.product__price=product.price 
+                  span.product__currency  ₽
     .item__table-block.mfp-hide.white-popup-block(id="sizes")
         .table-block__title Таблица размеров
         .table-block
