@@ -1,8 +1,12 @@
-- const items = [ {class: "slider-item", srcset:"../img/image4_mob.jpg 321w, ../img/image2_mid.jpg 768w, ../img/image2.jpg 1440w", src:"/img/image2.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Reebok Aztrek Double", titleClass:"slider-item__title"}, {class: "slider-item", srcset:"../img/image1_mob.jpg 320w, ../img/image1_mid.jpg 768w, ../img/image1.jpg 1440w", name:'Maison Margiela Fusion Low Sneakers', text:"Распродажа до −15%", titleClass:"slider-item__title _white"}, {class: "slider-item _gradient", srcset:"../img/image3_mob.jpg 321w, ../img/image3_mid.jpg 768w, ../img/image3.jpg 1440w", src:"/img/image3.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Nike ACG: навстречу новым открытиям", titleClass:"slider-item__title _white"}]
+- const items = [ {class: "slider-item", srcset1:"../img/image2_mob.jpg",srcset2:"../img/image2_mid.jpg",srcset3:"../img/image2.jpg", src:"/img/image2.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Reebok Aztrek Double", titleClass:"slider-item__title"}, {class: "slider-item", srcset1:"../img/image1_mob.jpg",srcset2:"../img/image1_mid.jpg",srcset3:"../img/image1.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Распродажа до −15%", titleClass:"slider-item__title _white"}, {class: "slider-item _gradient", srcset1:"../img/image3_mob.jpg",srcset2:"../img/image3_mid.jpg",srcset3:"../img/image3.jpg", src:"/img/image3.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Nike ACG: навстречу новым открытиям", titleClass:"slider-item__title _white"}]
 
 .header__slider.js__slider
   for item in items
     div(class=item.class)
-      img(srcset=item.srcset sizes="(max-width: 350px) 320px, (max-width: 768px) 768px, 1440px" src=item.src class="slider-item__image " alt=item.name)
+      picture
+        source(media="(max-width: 330px)" srcset=item.srcset1 type="image/jpeg")
+        source(media="(max-width: 768px)" srcset=item.srcset2 type="image/jpeg")
+        source(media="(min-width: 768px)" srcset=item.srcset3 type="image/jpeg")
+        img(src=item.src alt=item.name)
       h2(class=item.titleClass)
         a.slider-item__link=item.text
