@@ -1,12 +1,30 @@
-- const items = [ {class: "slider-item", srcset1:"../img/image2_mob.jpg",srcset2:"../img/image2_mid.jpg",srcset3:"../img/image2.jpg", src:"/img/image2.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Reebok Aztrek Double", titleClass:"slider-item__title"}, {class: "slider-item", srcset1:"../img/image1_mob.jpg",srcset2:"../img/image1_mid.jpg",srcset3:"../img/image1.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Распродажа до −15%", titleClass:"slider-item__title _white"}, {class: "slider-item _gradient", srcset1:"../img/image3_mob.jpg",srcset2:"../img/image3_mid.jpg",srcset3:"../img/image3.jpg", src:"/img/image3.jpg", name:'Maison Margiela Fusion Low Sneakers', text:"Nike ACG: навстречу новым открытиям", titleClass:"slider-item__title _white"}]
-
-.header__slider.js__slider
-  for item in items
-    div(class=item.class)
-      picture
-        source(media="(max-width: 330px)" srcset=item.srcset1 type="image/jpeg")
-        source(media="(max-width: 768px)" srcset=item.srcset2 type="image/jpeg")
-        source(media="(min-width: 768px)" srcset=item.srcset3 type="image/jpeg")
-        img(src=item.src alt=item.name)
-      h2(class=item.titleClass)
-        a.slider-item__link=item.text
+.header__slider.slider.js__slider
+      .slider__item
+        img(src='../img/slider-item/bg1.jpg')
+        .slider__info-container
+          .slider__info
+            h2.slider__title Международная торговая компания
+              span 国際商社
+            .slider__text 
+              p Компания «Нийру» является торговой компанией, базирующейся в Токио, Япония. Основным направлением деятельности компании является экспорт оригинальной японской продукции на рынки стран СНГ.
+              p ニール有限会社は、日本、東京にある商社です。弊社の主な専門は、オリジナル日本製商品をCISの市場に輸出することです。
+      .slider__item
+        img(src='../img/slider-item/bg1.jpg')
+        .slider__info-container
+          .slider__info
+            h2.slider__title Международная торговая компания
+              span 国際商社
+            .slider__text 
+              p Компания «Нийру» является торговой компанией, базирующейся в Токио, Япония. Основным направлением деятельности компании является экспорт оригинальной японской продукции на рынки стран СНГ.
+              p ニール有限会社は、日本、東京にある商社です。弊社の主な専門は、オリジナル日本製商品をCISの市場に輸出することです。
+      .slider__item
+        img(src='../img/slider-item/bg1.jpg')
+        .slider__info-container
+          .slider__info
+            h2.slider__title Международная торговая компания
+              span 国際商社
+            .slider__text 
+              p Компания «Нийру» является торговой компанией, базирующейся в Токио, Япония. Основным направлением деятельности компании является экспорт оригинальной японской продукции на рынки стран СНГ.
+              p ニール有限会社は、日本、東京にある商社です。弊社の主な専門は、オリジナル日本製商品をCISの市場に輸出することです。
+.slider__nav-container
+  .slider__nav

@@ -1,0 +1,79 @@
+.main__icons {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1680px) {
+    &._container {
+      margin: 0;
+      padding: 0 70px 0 98px;
+    }
+  }
+  @media (max-width: 950px) {
+    &._container {
+      padding: 0 16px;
+    }
+  } 
+   @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  .icons {
+    display: flex;
+    margin-top: 90px;
+    margin-bottom: 130px;
+    @media (max-width: 1680px) {
+      width: 33%;
+      &:not(:last-child) {
+        margin-right: 110px;
+        @media (max-width: 1000px) {
+          margin-right: 50px;
+        }
+      }
+    }
+    @media (max-width: 1550px) {
+      flex-direction: column;
+      margin-top: 80px;
+      margin-bottom: 100px;
+    }
+    @media (max-width: 767px) {
+      flex-direction: row;
+      width: 100%;
+      margin: 60px 0;
+    }
+    img {
+      object-fit: contain;
+      width: 72px;
+      height: auto;
+    }
+    &__info {
+      margin-left: 45px;
+      max-width: 235px;
+      @media (max-width: 1550px) {
+        margin-left: 0;
+      }
+      @media (max-width: 767px) {
+        max-width: 100%;
+        margin-left: 24px;
+      }
+    }
+    &__title {
+      font-family: "Rubik";
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 150%;
+      color: #555770;
+      margin-bottom: 8px;
+      @media (max-width: 1490px) {
+        font-size: 18px;
+      }
+    }
+    &__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #89969F;
+    margin: 0;
+    @media (max-width: 1550px) {
+      font-size: 16px;
+    }
+    }
+  }
+}

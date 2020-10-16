@@ -1,27 +1,84 @@
 @import url("header.css");
-@import url("slider.css");
-@import url("main.css");
 @import url("footer.css");
+@import url("slider.css");
+@import url("menu.css");
+@import url("partners.css");
+@import url("icons.css");
+@import url("news.css");
+@import url("partnership.css");
+@import url("main.css");
 @import url("catalog.css");
 @import url("item.css");
 @import url("order.css");
 @import url("complete.css");
 @import url("about.css");
 
+
 @font-face {
   font-display: swap;
-  font-family: "PTSans";
-  src: local("PTSans"),
-    url("../fonts/pt_sans_regular.woff2") format("woff2"),
-    url("../fonts/pt_sans_regular.woff") format("woff");
+  font-family: "Rubik";
+  src: local("Rubik"),
+    url("../fonts/Rubik-Regular.woff2") format("woff2"),
+    url("../fonts/Rubik-Regular.woff") format("woff");
+    font-weight: 400;
 }
 @font-face {
   font-display: swap;
-  font-family: "PTSans-bold";
+  font-family: "Rubik";
+  src: local("Rubik"),
+    url("../fonts/Rubik-Medium.woff2") format("woff2"),
+    url("../fonts/Rubik-Medium.woff") format("woff");
+    font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  src: local("Rubik"),
+    url("../fonts/Rubik-Bold.woff2") format("woff2"),
+    url("../fonts/Rubik-Bold.woff") format("woff");
   font-weight: bold;
-  src: local("PTSans"),
-    url("../fonts/PTSans-Bold.woff2") format("woff2"),
-    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: local("Inter"),
+    url("../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff");
+    font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: local("Inter"),
+    url("../fonts/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/Inter-Medium.woff") format("woff");
+    font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: local("Inter"),
+    url("../fonts/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
 }
 
 html,
@@ -29,15 +86,26 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "PTSans";
+  font-family: "Rubik";
+  position: relative;
+  background: #F0F1F3;
+  z-index: -10;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wrapper {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 ._container {
-  max-width: 1136px;
+  max-width: 1480px;
   margin: 0 auto;
-  @media (max-width: 1199px) { 
-    padding-left:  16px;
+  @media (max-width: 1500px) {
+    max-width: 97.5%;
+    margin: 0 15px;
   }
 }
 
@@ -54,4 +122,11 @@ input,
 textarea, fieldset {
   border: none;
   outline: none;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

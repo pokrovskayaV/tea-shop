@@ -1,23 +1,22 @@
 header.header
-  .header__content
-    .js-menuScroll
-      nav.header__menu._container(itemscope itemtype="http://schema.org/SiteNavigationElement")
-        a(href="index.html" itemprop="url").header__title Фетч
-        ul.header__list.js__nav-menu.scroll-end
-          li.header__item 
-            a.header__item-link(href="#" itemprop="url") Одежда
-          li.header__item 
-            a.header__item-link(href="catalog.html" itemprop="url") Обувь
-          li.header__item 
-           a.header__item-link(href="#" itemprop="url") Аксессуары
-          li.header__item 
-           a.header__item-link(href="#" itemprop="url") Блог
-          li.header__item
-            a.header__item-link(href="about.html" itemprop="url") Магазин
-          li.header__item 
-            a.header__item-link(href="#" itemprop="url") Доставка и оплата
-        .header__shadow
-        a(href="order.html" itemprop="url").header__order._filled
-          span.header__cart-img
-          span.header__cart 4
-          span.header__link-cart Оформить заказ
+   .header__container._container
+     .header__top
+       a(href="tel:80000000000").header__tel 8 (000) 000-0000
+       a(href="mailto:info@niiru.ru").header__mail info@niiru.ru
+     nav.header__menu
+       a(href="index.html").header__logo
+         img(src="img/logo.png", alt="")
+       ul.header__list
+         li.header__item 
+           a.header__item-link(href="#") О компании
+         li.header__item 
+           a.header__item-link(href="#") Новости
+         li.header__item._catalog
+          a.header__item-link(href="#") Каталог
+         li.header__item 
+          a.header__item-link(href="#") Услуги
+         li.header__item
+           a.header__item-link(href="#") Контакты
+         li.header__item._burger
+           a(href="#menu-popup" class="menu__popap")
+             img(src="img/icons/burger.svg")

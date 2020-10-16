@@ -1,23 +1,19 @@
-- const widths = [ { value:"1199px" }, { value:"904px" }, { value:"800px" }, { value:"765px" }, { value:"600px" }, { value:"675px" }, { value:"649px" }, { value:"550px" }, { value:"480px" }, { value:"435px" }, { value:"330px" }]
-
-head(itemscope itemtype="http://schema.org/WPHeader")
+head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(itemprop="description" name="description" content="Мультибрендовый магазин модной одежды")
-    title(itemprop="headline") Фетч
+    meta(name="description" content="Мультибрендовый магазин модной одежды")
+    titleTea
     link(rel="stylesheet" href="/css/style.css" type="text/css")
-    link(rel="icon" href="img/icons/favicon.svg")
-    for width in widths
-      link(media=`(max-width:${width.value})` href="/css/style.css" rel="stylesheet" type="text/css")
-    link(media="(min-width:1199px)" rel="stylesheet" href="/css/style.css" type="text/css")
+    //link(rel="icon" href="img/icons/favicon.svg")
+    link(rel="stylesheet" type="text/css" href="/css/lib/uikit.css")
     link(rel="stylesheet" type="text/css" href="/css/lib/slick.css")
     link(rel="stylesheet" type="text/css" href="/css/lib/magnific-popup.css")
-    link(rel="preload" href="fonts/pt_sans_regular.woff2" as="font" crossorigin)
-    link(rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin)
+    //link(rel="preload" href="fonts/pt_sans_regular.woff2" as="font" crossorigin)
+    //link(rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin)
     meta(property="og:locale" content="ru_RU")
     meta(property="og:type" content="website")
-    meta(property="og:title" content="Фетч")
-    meta(property="og:description" content="Мультибрендовый магазин модной одежды")
-    meta(property="og:image" content="/img/maison.png")
-    meta(property="og:image:width" content="1136")
-    meta(property="og:image:height" content="480")
+    meta(property="og:title" content="")
+    meta(property="og:description" content="")
+    meta(property="og:image" content="")
+    meta(property="og:image:width" content="")
+    meta(property="og:image:height" content="")

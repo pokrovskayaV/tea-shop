@@ -1,7 +1,11 @@
 let initSlidersMain = () => {
   $(".js__slider").slick({
   variableWidth: true,
-  lazyLoad: 'ondemand'
+  lazyLoad: 'ondemand',
+  arrows: true,
+  dots: true,
+  appendArrows:$('.slider__nav'),
+  appendDots:$('.slider__nav'),
   });
 };
 
@@ -28,33 +32,50 @@ let initSlidersItem = () => {
   });
 };
 
-let initSliderReccomend = () => {
-  $(".js__slider-recommend").slick({
+let initSliderNews = () => {
+  $(".js__slider-news").on('init', function(){
+    
+  });
+  $(".js__slider-news").slick({
     lazyLoad: 'ondemand',
-    infinite: true,
-    slidesToShow: 4,
+    infinite: false,
+    slidesToShow: 3.3,
     centerMode: false,
-    slidesToScroll: 1,
+    focusOnSelect: false,
+    slidesToScroll:1,
+    appendArrows:$('.news__nav'),
     arrows: true,
     responsive: [
       {
-        breakpoint: 1100,
+        breakpoint: 1250,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 3.2,
         }
       },
       {
-        breakpoint: 819,
+        breakpoint: 1210,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2.5,
         }
       },
       {
-        breakpoint:550,
+        breakpoint:630,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.7,
         }
-      }
+      },
+      {
+        breakpoint:430,
+        settings: {
+          slidesToShow: 1.3,
+        }
+      },
+      {
+        breakpoint:330,
+        settings: {
+          slidesToShow: 1.2,
+        }
+      },
     ]
   });
 };
@@ -63,5 +84,5 @@ let initSliderReccomend = () => {
 export default function initSliders() {
   initSlidersMain();
   initSlidersItem();
-  initSliderReccomend();
+  initSliderNews();
 }

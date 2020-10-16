@@ -1,0 +1,123 @@
+.news {
+  padding-top: 220px;
+  position: relative;
+  @media (max-width: 1490px) {
+    padding-top: 130px;
+  }
+  @media (max-width: 950px) {
+    padding-top: 90px;
+  }
+  &:after {
+      content: '';
+      background-color: #ffffff;
+      width: 100vw;
+      height: 500px;
+      z-index: -5;
+      position: absolute;
+      top: 60%;
+      left: 0px;
+      @media (max-width: 1490px) {
+        height: 400px;
+      }
+  }
+  &__info-block {
+    padding: 0 70px 0 98px;
+    @media (max-width: 1680px) {
+      &._container {
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 950px) {
+      padding: 0 0 40px 0;
+      &._container {
+        margin: 0 15px;
+      }
+    }
+  }
+}
+.news-block {
+  &__info {
+    margin: 50px 0 0 0;
+    max-width: 360px;
+    @media (max-width: 1490px) {
+      max-width: 300px;
+    }
+    @media (max-width: 950px) {
+      margin: 38px 0 0 0;
+    }
+  }
+  &__data {
+    font-size: 16px;
+    line-height: 19px;
+    color: #20DB57;  
+    @media (max-width: 1490px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+  &__title {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  color: #555770;
+  margin: 11px 0 18px 0;
+  @media (max-width: 1490px) {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 474px) {
+    font-size: 18px;
+  }
+  }
+  &__text {
+  font-size: 20px;
+  line-height: 36px;
+  color: #8E90A6;
+  margin: 0;
+  @media (max-width: 1490px) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  @media (max-width: 474px) {
+    font-size: 16px;
+  }
+  }
+} 
+
+.news__nav-container {
+  max-width: 1680px;
+  margin-top: -30px;
+  margin-bottom: 61px;
+  z-index: 2;
+  padding-right: 100px;
+  @media (max-width: 950px) {
+   display: none;
+  }
+}
+.news__nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media (max-width: 1680px) {
+    margin-right: 50px;
+  }
+  .slick-arrow {
+    z-index: 2;
+    width: 15px;
+    height: 20px;
+    font-size: 0;
+    display: block;
+    background: url('../../img/icons/arrow-news-green.svg') no-repeat 0 50%/ 100%;
+    object-fit: contain;
+    &.slick-disabled {
+    background: url('../../img/icons/arrow-news-prev.svg') no-repeat 0 50%/ 100%;
+  }
+  }
+  .slick-next {
+    transform: rotate(-180deg);
+  }
+  .slick-prev {
+    margin-right: 75px;
+  }
+}

@@ -1,0 +1,23 @@
+mixin news-block(options={})
+ - const {src, data, title, text} = options
+  .news-block
+    img.news-block__img(src=src)
+    .news-block__info
+      span.news-block__data=data
+      h3.news-block__title=title
+      p.news-block__text=text
+
+.main__news.news
+  .news__info-block.info-block._container
+    .news__subtitle.subtitle компания
+    .news__title.title Наши новости
+    .news__text.text ニュース
+  .news__nav-container
+    .news__nav
+  .news__list.js__slider-news
+    +news-block({src:'../img/news/news1.jpg', data:'03 сентября 2020 г.', title:'Дегустация лучших сортов в торговом центре “энергоплаза”', text:'エネルゴプラザー」デパートにおける 質的なお茶の試飲会'})
+    +news-block({src:'../img/news/news2.jpg', data:'28 августа 2020 г.', title:'Начало партнерства с интернет-магазином OZON', text:'OZON ネット通販会社との パートナーシップ開始'})
+    +news-block({src:'../img/news/news3.jpg', data:'23 августа 2020 г.', title:'Открытие нового филиала в Москве', text:'モスクワにおける新支店開設'})
+    +news-block({src:'../img/news/news1.jpg', data:'14 августа 2020 г.', title:'Публикация новой категории продукции', text:'新カテゴリー商品の投稿'})
+    +news-block({src:'../img/news/news1.jpg', data:'03 сентября 2020 г.', title:'Дегустация лучших сортов в торговом центре “энергоплаза”', text:'エネルゴプラザー」デパートにおける 質的なお茶の試飲会'})
+    +news-block({src:'../img/news/news2.jpg', data:'28 августа 2020 г.', title:'Начало партнерства с интернет-магазином OZON', text:'OZON ネット通販会社との パートナーシップ開始'})

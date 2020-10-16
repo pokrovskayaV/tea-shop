@@ -1,0 +1,13 @@
+mixin icon(options={})
+ - const {src,title, text} = options
+  .icons
+    img.icons__img(src=src)
+    .icons__info
+      h3.icons__title=title
+      p.icons__text=text
+
+
+.main__icons._container
+    +icon({src:'../img/icons/certificate.svg', title:'Сертифицированная продукция', text:'認可商品'})
+    +icon({src:'../img/icons/quality.svg', title:'Традиционное японское качество', text:'日本の伝統的なクオリティー'})
+    +icon({src:'../img/icons/quality.svg', title:'Традиционное японское качество', text:'日本の伝統的なクオリティー'})
