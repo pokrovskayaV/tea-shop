@@ -109,7 +109,8 @@
      &__text {
        margin-bottom: 0;
        font-size: 40px;
-       line-height: 47px;  
+       line-height: 47px; 
+       white-space: nowrap; 
        @media (max-width: 1490px) {
         font-size: 32px;
         line-height: 38px;

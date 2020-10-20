@@ -3,7 +3,7 @@ mixin fact(options={})
   .partnership__fact.fact
     span.fact__title=title
     p.fact__text-top=textTop
-    p.fact__text-bottom=textBottom
+    p.fact__text-bottom!=textBottom
 
 .main__partnership.partnership._container
   .partnership__content
@@ -20,14 +20,14 @@ mixin fact(options={})
       .partnership__solution
         span.partnership__number 01
         p.partnership__text-top Реализация оригинальной японской продукции от производителя на территории России и стран СНГ
-        p.partnership__text-bottom ロシア連邦及びCISの地域において製造者による オリジナル日本商品販売
+        p.partnership__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販売
       .partnership__solution
         span.partnership__number 02
         p.partnership__text-top Подготовка и экспорт японской продукции в любую точку мира через крупнейшие порты Японии
-        p.partnership__text-bottom 日本の最も大きい港町を軽油して、地球のどのところでも日本商品の準備及び輸出する
+        p.partnership__text-bottom 日本の最も大きい港町を軽油して、<br class="_media2">地球のどのと<br class="_media1">ころでも日本<br class="_media2">商品の準備及び輸出する
   .partnership__data
     +fact({title:'5000+', textTop:'товаров реализутся ежемесячно', textBottom:'各月販売される商品の数'})
-    +fact({title:'74', textTop:'компании являются нашими партнерами', textBottom:`弊社のパートナー になっている会社の数`})
-    +fact({title:'100%', textTop:'качественная японская продукция из первых рук', textBottom:`製造者のハイクオリティの 日本商品`})
-    +fact({title:'28', textTop:'сотрудников компании в Японии и других странах', textBottom:'日本及び海外の弊社支店の スタッフの数'})
+    +fact({title:'74', textTop:'компании являются нашими партнерами', textBottom:`弊社のパートナー<br>になっている会社の数`})
+    +fact({title:'100%', textTop:'качественная японская продукция из первых рук', textBottom:`製造者のハイクオリティの<br>日本商品`})
+    +fact({title:'28', textTop:'сотрудников компании в Японии и других странах', textBottom:'日本及び海外の<br>弊社支店の スタッフの数'})
   

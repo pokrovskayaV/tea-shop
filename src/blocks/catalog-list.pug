@@ -14,7 +14,7 @@ mixin item(options={})
 
 .main__catalog._container
   .catalog-list
-    ul(class="uk-tab" data-uk-tab="{connect:'#my-id'}")
+    ul(class="uk-tab" data-uk-tab="{connect:'#catalog'}")
       li 
         a(href="#").catalog-list__tab
           p.catalog-list__title Сенча
@@ -35,7 +35,7 @@ mixin item(options={})
         a(href="#").catalog-list__tab
           p.catalog-list__title Матча
           span.catalog-list__text 沼津抹茶
-    ul(id="my-id" class="uk-switcher" )
+    ul(id="catalog" class="uk-switcher" )
       li 
         .catalog-list__items.items
           +item({src:'../img/products/prod1.png',weight:'100г.', price:'800 ₽'})

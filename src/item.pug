@@ -1,120 +1,118 @@
-- const sliderItems = [ {src:"/img/slider-item/img1.jpg", srcmin:"/img/slider-item/img1min.jpg", name:'Maison Margiela Fusion Low Sneakers'}, {src:"/img/slider-item/img2.jpg", srcmin:"/img/slider-item/img2min.jpg", name:'Maison Margiela Fusion Low Sneakers'},{src:"/img/slider-item/img3.jpg", srcmin:"/img/slider-item/img3min.jpg", name:'Maison Margiela Fusion Low Sneakers'},{src:"/img/slider-item/img4.jpg", srcmin:"/img/slider-item/img4min.jpg", name:'Maison Margiela Fusion Low Sneakers'},{src:"/img/slider-item/img3.jpg", srcmin:"/img/slider-item/img3min.jpg", name:'Maison Margiela Fusion Low Sneakers'} ]
-
-- const recommend = [ {src:"/img/products/prod1.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" }, {src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" }, {src:"/img/products/prod3.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" }, {src:"/img/products/prod4.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" },{src:"/img/products/prod2.jpg", name:'Maison Margiela Fusion Low Sneakers', price:'92 000', type:"Кроссовки" } ]
+- const sliderItems = [{src:"img/slider-item/p1.png", srcMin:'img/slider-item/p1-min.jpg'}, {src:"img/slider-item/p1.png", srcMin:'img/slider-item/p1-min.jpg'},{src:"img/slider-item/p1.png", srcMin:'img/slider-item/p1-min.jpg'},{src:"img/slider-item/p1.png", srcMin:'img/slider-item/p1-min.jpg'}]
 
 doctype html
 html(lang="ru")
   include blocks/head.pug
   body
     include blocks/header.pug  
-    .item._container
+    .item__bg
+      img(src='img/item-bg.jpg')
+    .item._container._container
       .item__content
-        section.item__description.description(itemscope itemtype="http://schema.org/Product")
-          h1.description__title(itemprop="name") Maison Margiela Fusion Low Sneakers
-          span.description__type(itemprop="model") Кроссовки
-          form.description__form.form(action="#")
-            .form__color-block
-              .form__title Цвет
-              input(type="radio", name="color", id="pink", value="pink" checked)
-              label(for="pink") Белый с розовым
-              input(type="radio", name="color",id="green", value="green")
-              label(for="green") Белый с зеленым          
-            .form__size-block
-              .form__title Размер US
-              input(type="radio", name="size",id="size6", value="size6" checked)
-              label(for="size6") 6
-              input(type="radio", name="size",id="size6,5", value="size6,5")
-              label(for="size6,5") 6,5   
-              input(type="radio", name="size",id="size7", value="size7")
-              label(for="size7") 7
-              input(type="radio", name="size",id="size9", value="size9")
-              label(for="size9") 9              
-            a.form__link(class="js__popap" href="#sizes") Таблица размеров
-            button.form__btn(type="submit" itemprop="offers" itemscope itemtype="http://schema.org/Offer") Купить, 
-              span.product__price(itemprop="price") 92 000 
-              span.product__currency(itemprop="priceCurrency" content="RUB") ₽
-          .description__feature(itemprop="description")
-            .description__material 
-              span Материал
-              p Кожа, текстиль
-            .description__country 
-              span Страна-производитель
-              p Италия
-            .description__text 
-              span Описание
-              p Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством.
-              p В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля.
-              p Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками.
-              p Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид.
-            .description__details
-              span Детали
-              ul
-                li — Два вида кожи
-                li — Детали из текстиля
-                li — Неординарная шнуровка
-                li — Перфорация на мыске
-                li — Стежок на заднике
-                li — Фигурная резиновая подошва
-                li — Цепкая подметка
-                li — Окрашивание с брызгами и потеками
-                li — Пестрая расцветка
-        section.item__slider.js__slider-item
-          .item__slider-for
-            .js__slider-for
+        .item__breadcrumb.breadcrumb
+          ul.uk-breadcrumb
+            li.breadcrumb__home
+              a(href="#") 
+                span
+            li.breadcrumb__catalog
+              a(href="#") Каталог
+            li.breadcrumb__tea
+              a(href="#") Чай
+            li.breadcrumb__item
+              a(href="#") Ходзича
+            li.breadcrumb__quantity
+              a(href="#") 3г x 7
+        .item__product._line
+          .item__slider
+            .item__slider-for.js__slider-for
               for item in sliderItems
-               .item__.product__item
-                 img(itemprop="image" class="item__image" src=item.src, alt=item.name)
-          .item__slider-nav
-           .js__slider-nav
-              for item in sliderItems
-               .item__.product__item
-                 img(itemprop="image" class="item__image" src=item.srcmin, alt=item.name)
-      
-      h3.item__slider-title Вам может быть интересно
-      .item__slider-recommend
-          .js__slider-recommend
-            for product in recommend
-              .product__item
-                img(class="item__image" src=product.src, alt=product.name)
-                .product__description
-                  a(href="item.html").product__title=product.name
-                  span.product__type=product.type
-                  span.product__price=product.price 
-                  span.product__currency  ₽
-    .item__table-block.mfp-hide.white-popup-block(id="sizes")
-        .table-block__title Таблица размеров
-        .table-block
-          table
-            tr
-              th US
-              td 4
-              td 4,5
-              td 5
-              td 5,5
-              td 6
-              td 6,5
-              td 7
-              td 7,5         
-            tr
-              th UK
-              td 3,5
-              td 4
-              td 4,5
-              td 5
-              td 5,5
-              td 6
-              td 6,5
-              td 7
-            tr
-              th EU
-              td 36
-              td 37
-              td 38
-              td 39
-              td 40
-              td 41
-              td 42
-              td 43  
+                .item__.product__item
+                  img(src=item.src)
+            .item__slider-nav.js__slider-nav
+                for item in sliderItems
+                  .item__.product__item
+                    img(src=item.srcMin)
+          .item__right-block
+            .item__title._line
+              h2 Ходзича
+              p ほうじ茶
+            .item__price.price
+              span.price__old 800 ₽
+              span.price__active 700 ₽
+            .item__text._line
+              p Метод обжарки, подходящих для каждого типа чая, такие как форма,   твердость и размер чайных листьев."Жареный песок" – это особенная обжарка чая. 
+              p 茶葉の形状・堅さ・大きさ等、茶葉ごとに適した二種類の焙煎方<br>法「直火」「砂炒り」によるこだわり焙煎です。<br>直火焙煎」の窯は地域で一番の大きさで、強い火力で一気に仕上げる<br>ため苦みが少なく、<br>香り高くて甘みのあるさっぱりとした味わいです。
+            .item__btn-block
+              .item__counter
+                span.counter__minus &mdash;
+                input(type="text" name="quantity" value="1" readonly)
+                span.counter__plus +
+              button.item__like
+                span
+              button.item__cart В корзину
+            form.item__form(action="#")
+                input(type="radio", name="color", id="pink", value="pink" checked)
+                label(for="pink") 
+                  span 3г х 7 пакетиков
+                  span 3г х 7 個入り
+                input(type="radio", name="color",id="green", value="green")
+                label(for="green") 
+                  span 3г х 7 пакетиков
+                  span 3г х 7 個入り
+        include blocks/icons.pug 
+    .item__info.info._container
+        ul(class="uk-tab info__tabs" data-uk-tab="{connect:'#info'}")
+          li 
+            a(href="#").info__tab
+              p.info__title Описание
+              span.info__text 詳細
+          li 
+            a(href="#").info__tab
+              p.info__title Как заваривать
+              span.info__text お茶の飲み方
+          li 
+            a(href="#").info__tab
+              p.info__title Отзывы (14)
+              span.info__text フィードバック (14)
+          li 
+            a(href="#").info__tab
+              p.info__title О производителе
+              span.info__text メーカー情報
+          li 
+            a(href="#").info__tab
+              p.info__title Доставка
+              span.info__text 配達過程
+        ul(id="info" class="uk-switcher")
+          li.info__item.description
+            img(src="img/about.jpg", alt="")
+            .description__content
+              .description__text
+                p.description__text-top В сухом виде – мелкие, тонкие, сплюснутые трубочки скрученных   листиков и их фрагменты коричневых тонов, а также тонкие черенки. Аромат сухого чая   сладковатый, хлебно-пряный, с кофейными нотками. Настой прозрачный, темного абрикосового   оттенка.
+                p.description__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販  売
+          li.info__item.description
+            img(src="img/about.jpg", alt="")
+            .description__content
+              .description__text
+                p.description__text-top В сухом виде – мелкие, тонкие, сплюснутые трубочки скрученных   листиков и их фрагменты коричневых тонов, а также тонкие черенки. Аромат сухого чая   сладковатый, хлебно-пряный, с кофейными нотками. Настой прозрачный, темного абрикосового   оттенка.
+                p.description__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販  売
+          li.info__item.description
+            img(src="img/about.jpg", alt="")
+            .description__content
+              .description__text
+                p.description__text-top В сухом виде – мелкие, тонкие, сплюснутые трубочки скрученных   листиков и их фрагменты коричневых тонов, а также тонкие черенки. Аромат сухого чая   сладковатый, хлебно-пряный, с кофейными нотками. Настой прозрачный, темного абрикосового   оттенка.
+                p.description__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販  売
+          li.info__item.description
+            img(src="img/about.jpg", alt="")
+            .description__content
+              .description__text
+                p.description__text-top В сухом виде – мелкие, тонкие, сплюснутые трубочки скрученных   листиков и их фрагменты коричневых тонов, а также тонкие черенки. Аромат сухого чая   сладковатый, хлебно-пряный, с кофейными нотками. Настой прозрачный, темного абрикосового   оттенка.
+                p.description__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販  売
+          li.info__item.description
+            img(src="img/about.jpg", alt="")
+            .description__content
+              .description__text
+                p.description__text-top В сухом виде – мелкие, тонкие, сплюснутые трубочки скрученных   листиков и их фрагменты коричневых тонов, а также тонкие черенки. Аромат сухого чая   сладковатый, хлебно-пряный, с кофейными нотками. Настой прозрачный, темного абрикосового   оттенка.
+                p.description__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販  売
     include blocks/footer.pug         
     include blocks/scripts.pug  
     

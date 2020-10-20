@@ -13,7 +13,7 @@ let path = {
   },
   src: {
     pug: sourse_folder + "/*.pug",
-    scss:[sourse_folder + "/scss/*.scss", sourse_folder + "/scss/blocks/*.scss"],
+    scss:[sourse_folder + "/scss/*.scss", sourse_folder + "/scss/blocks/*.scss", sourse_folder + "/scss/blocks/**/*.scss"],
     js: sourse_folder + "/js/*.js",
     img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourse_folder + "/fonts/*.{ttf,woff,woff2}",
@@ -22,7 +22,7 @@ let path = {
   },
   watch: {
     pug: [sourse_folder + "/*.pug", sourse_folder + "/blocks/*.pug"],
-    scss:[sourse_folder + "/scss/*.scss", sourse_folder + "/scss/blocks/*.scss"],
+    scss:[sourse_folder + "/scss/*.scss", sourse_folder + "/scss/blocks/*.scss",  sourse_folder + "/scss/blocks/**/*.scss"],
     js: [sourse_folder + "/js/*.js", sourse_folder + "/js/parts/*.js"],
     img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourse_folder + "/fonts/*.{ttf,woff,woff2}",

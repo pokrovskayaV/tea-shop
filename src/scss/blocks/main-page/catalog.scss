@@ -50,6 +50,7 @@
       line-height: 36px;
       color: #8B90A0;
       min-width: 96px;
+      white-space: nowrap; 
       @media (max-width: 1490px) {
         font-size: 20px;
         line-height: 36px;
@@ -106,6 +107,7 @@
          font-size: 18px;
          line-height: 22px;
          color: #A3A5BB;
+         white-space: nowrap; 
          @media (max-width: 1490px) {
           font-size: 16px;
         }

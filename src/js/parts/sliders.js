@@ -26,7 +26,7 @@ let initSlidersItem = () => {
     asNavFor: ".js__slider-for",
     dots: false,
     focusOnSelect: true,
-    infinite: true,
+    infinite: false,
     arrows: false,
     vertical: false,
   });

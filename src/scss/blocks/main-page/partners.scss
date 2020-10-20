@@ -58,7 +58,17 @@
       font-size: 18px;
       line-height: 150%;
       color: #8E90A6;
+      white-space: nowrap;
+      br._media2 {
+        display: none;
+      }
       @media (max-width: 1490px) {
+        br._media1 {
+          display: none;
+        }
+        br._media2 {
+          display: block;
+        }
         font-size: 16px;
       }
     }
@@ -101,9 +111,8 @@
       margin-bottom: 50px;
       margin-right: 53px;
     }
-    @media (max-width: 474px) {
+    @media (max-width: 424px) {
       margin-right: 40px;
-
       &:nth-child(even) {
         margin-right: 0;
       }

@@ -164,6 +164,14 @@ p:last-child {
   padding-top: 15px;
   font-size: 18px;
   color: #A0A0A0;
+  white-space: nowrap;
+  br._media2 {
+    display: none;
+    @media (max-width: 1550px) {
+      display: block;
+    }
+  }
+
   @media (max-width: 1250px) {
     font-size: 16px;
   }
@@ -254,13 +262,23 @@ align-items: center;
 
 
 .news__list {
-  @media (max-width: 1680px) {
-    margin-left: 100px;
-  }
+&-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1480px;
+  padding: 0 100px;
   @media (max-width: 950px) {
-    margin-left: 16px;
-  }
-
+    padding: 0 15px;
+   }
+}
+position: absolute;
+top: 0;
+left: 0;
+margin-right: -220px;
+@media (max-width: 950px) {
+  margin-right: -40px;
+  padding-right: 16px;
+ }
   .slick-slide {
     max-width: 466px;
     min-width: 322px;

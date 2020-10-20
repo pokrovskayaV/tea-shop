@@ -5,17 +5,6 @@ import initPopup from "./parts/popup";
 
 
 $(document).ready(() => {
-  let changeMargin = () => {
-    if($(window).width() > 1681) {
-    let marginLeft = $('._container').css('margin-left');
-    $('.news__list').css({'margin-left':marginLeft})
-    } 
-  } 
-  changeMargin();
-  $(window).on( "resize", function () {
-    changeMargin();
-  })
-
   $('.footer__menu').on( "click", function (e) {
     e.preventDefault();
     if ($(e.target).hasClass('_open-list')) {
@@ -24,6 +13,24 @@ $(document).ready(() => {
     menuList.find('span').toggleClass('rotate');
     }
   })
+ $('.counter__minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+ $('.counter__plus').click(function () {
+   var $input = $(this).parent().find('input');
+   $input.val(parseInt($input.val()) + 1);
+   $input.change();
+   return false;
+  });
+
+  $('.item__like').click(function () {
+    $(this).toggleClass('_active');
+  });
 
   lazy();
   initSliders();
