@@ -17,12 +17,11 @@
     display: flex;
     padding-bottom: 38px;
   }
-  &__right-block {
+  .right-block {
   min-width: 400px;
   max-width: 50%;
   margin-left: 89px;
-  }
-  &__title {
+    &__title {
     position: relative;
     margin-bottom: 46px;
     h2 {
@@ -42,6 +41,8 @@
       white-space: nowrap;
     }
   }
+  }
+
   .price {
     margin-bottom: 20px;
     &__old {
@@ -301,4 +302,106 @@ li {
   height: 1px;
   background-color: rgba(196, 196, 196, 0.5);
 }
+ }
+
+.similar {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 1.33333px rgba(40, 41, 61, 0.04), 0px 2.66667px 5.33333px rgba(96, 97, 112, 0.16);
+  border-radius: 8px;
+  padding: 65px 95px;
+  &._container {
+    margin-bottom: 120px;
+  }
+  &__blocks {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    max-width: 279px;
+    width: 100%;
+    img {
+      height: 358px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__name {
+    p {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 36px;
+      color: #505565;
+      margin: 43px 0 8px 0;
+    }
+    span {
+     font-size: 28px;
+     line-height: 36px;
+     color: #8B90A0;
+     white-space: nowrap;
+    }
+  }
+}
+
+
+.item__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  color: #28293D;
+  margin: 0 0 27px 0;
+}
+.item__subtitle {
+  font-size: 32px;
+  line-height: 38px;
+  color: #8B90A0;
+}
+
+ .item__pictures {
+   width: 890px;
+   min-width: 500px;
+   height: auto;
+   display: grid;
+   grid-template-areas:
+ "picture1 picture2 picture3"
+ "picture4 picture2 picture3"
+ "picture4 picture5 picture3"
+ "picture4 picture5 picture6"
+ "picture4 picture5 picture6"; 
+ grid-gap: 34px 40px;
+ img {
+   object-fit: cover;
+   width: 100%;
+ }
+   .picture1 {
+     max-width: 338px;
+     height: 260px;
+     grid-area:picture1;
+   }
+   .picture2 {
+    max-width: 213px;
+    height: 318px;
+    grid-area:picture2;
+  }
+  .picture3 {
+    max-width: 341px;
+    height: 440px;
+    grid-area:picture3;
+  }
+  .picture4 {
+    max-width: 338px;
+    height: 308px;
+    grid-area:picture4;
+  }
+  .picture5 {
+    max-width: 213px;
+    height: 318px;
+    grid-area:picture5;
+  }
+  .picture6 {
+    max-width: 341px;
+    height: 260px;
+    grid-area:picture6;
+  }
+
  }

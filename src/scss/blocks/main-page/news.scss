@@ -1,6 +1,8 @@
 .news {
   padding-top: 220px;
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
   @media (max-width: 1490px) {
     padding-top: 130px;
   }
@@ -14,7 +16,7 @@
       height: 500px;
       z-index: -5;
       position: absolute;
-      top: 60%;
+      bottom: 0;
       left: 0px;
       @media (max-width: 1490px) {
         height: 400px;
@@ -37,13 +39,14 @@
 }
 .news-block {
   &__info {
-    margin: 50px 0 0 0;
+    margin: 50px 0 116px 0;
     max-width: 360px;
     @media (max-width: 1490px) {
       max-width: 300px;
+      margin: 50px 0 102px 0;
     }
     @media (max-width: 950px) {
-      margin: 38px 0 0 0;
+      margin: 38px 0 115px 0;
     }
   }
   &__data {
@@ -79,8 +82,8 @@
     font-size: 16px;
     line-height: 150%;
   }
-  @media (max-width: 474px) {
-    font-size: 16px;
+  @media (max-width: 850px) {
+    font-size: 14px;
   }
   }
 } 

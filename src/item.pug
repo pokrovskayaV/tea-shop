@@ -5,6 +5,13 @@ html(lang="ru")
   include blocks/head.pug
   body
     include blocks/header.pug  
+    //.item__pictures._container
+      img(src="img/picture/Rectangle 247.jpg", alt="").picture1
+      img(src="img/picture/Rectangle 245.jpg", alt="").picture2
+      img(src="img/picture/Rectangle 246.jpg", alt="").picture3
+      img(src="img/picture/Rectangle 248.jpg", alt="").picture4
+      img(src="img/picture/Rectangle 249.jpg", alt="").picture5
+      img(src="img/picture/Rectangle 250.jpg", alt="").picture6
     .item__bg
       img(src='img/item-bg.jpg')
     .item._container._container
@@ -32,8 +39,8 @@ html(lang="ru")
                 for item in sliderItems
                   .item__.product__item
                     img(src=item.srcMin)
-          .item__right-block
-            .item__title._line
+          .item__right-block.right-block
+            .right-block__title._line
               h2 Ходзича
               p ほうじ茶
             .item__price.price
@@ -113,6 +120,31 @@ html(lang="ru")
               .description__text
                 p.description__text-top В сухом виде – мелкие, тонкие, сплюснутые трубочки скрученных   листиков и их фрагменты коричневых тонов, а также тонкие черенки. Аромат сухого чая   сладковатый, хлебно-пряный, с кофейными нотками. Настой прозрачный, темного абрикосового   оттенка.
                 p.description__text-bottom ロシア連邦及びCISの地域において製造者による<br>オリジナル日本商品販  売
+    .item__similar.similar._container
+      h2.similar__title.item__title Похожая продукция
+      p.similar__subtitle.item__subtitle 同様な商品
+      .similar__blocks
+        .similar__block
+          img(src="img/similar1.jpg", alt="")
+          .similar__name
+            p Генмайча
+            span 玄米茶
+        .similar__block
+          img(src="img/similar2.jpg", alt="")
+          .similar__name
+            p Вакоча
+            span 和紅茶
+        .similar__block
+          img(src="img/similar3.jpg", alt="")
+          .similar__name
+            p Матча
+            span 沼津抹茶
+        .similar__block
+          img(src="img/similar4.jpg", alt="")
+          .similar__name
+            p Сенча
+            span 煎茶
+    
     include blocks/footer.pug         
     include blocks/scripts.pug  
     

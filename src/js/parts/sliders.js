@@ -59,21 +59,27 @@ let initSliderNews = () => {
         }
       },
       {
-        breakpoint:630,
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2.8,
+        }
+      },
+      {
+        breakpoint:850,
+        settings: {
+          slidesToShow: 2.3,
+        }
+      },
+      {
+        breakpoint: 630,
         settings: {
           slidesToShow: 1.7,
         }
       },
       {
-        breakpoint:430,
+        breakpoint: 460,
         settings: {
-          slidesToShow: 1.3,
-        }
-      },
-      {
-        breakpoint:330,
-        settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 1.15,
         }
       },
     ]

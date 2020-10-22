@@ -66,6 +66,10 @@
       @media (max-width: 1490px) {
         justify-content: space-between;
       }
+      @media (max-width: 768px) {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
       &__product {
         margin: 0 68px;
         padding-bottom: 80px;
@@ -154,6 +158,7 @@
   box-sizing: border-box;
   list-style: none;
   position: relative;
+
   @media (max-width: 1490px) {
     padding: 0 19px 0 14px;
   }
@@ -162,6 +167,10 @@
   li:not(:last-child) {
     padding-right: 38px;
   }
+  }
+  @media (max-width: 570px) {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
  
 }

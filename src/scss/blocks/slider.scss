@@ -1,6 +1,6 @@
 .slider {
 margin-top: -184px;
-z-index: 0;
+z-index: -1;
 position: relative;
 overflow: hidden;
 @media (max-width: 950px) {
@@ -165,9 +165,23 @@ p:last-child {
   font-size: 18px;
   color: #A0A0A0;
   white-space: nowrap;
+  br._media1 {
+    @media (max-width: 1550px) {
+      display: none;
+    }
+  }
   br._media2 {
     display: none;
     @media (max-width: 1550px) {
+      display: block;
+    }
+    @media (max-width: 474px) {
+      display: none;
+    }
+  }
+  br._media3 {
+    display: none;
+    @media (max-width: 474px) {
       display: block;
     }
   }
@@ -186,10 +200,10 @@ p:last-child {
  margin: 0 auto;
  margin-top: -90px;
  margin-bottom: 100px;
+ box-sizing: border-box;
  z-index: 2;
  @media (max-width: 1550px) {
   padding: 0 34px 0 85px;
-  max-width: 100%;
 }
 @media (max-width: 950px) {
   padding: 0 16px;
@@ -268,17 +282,26 @@ align-items: center;
   max-width: 1480px;
   padding: 0 100px;
   @media (max-width: 950px) {
-    padding: 0 15px;
+    padding: 0 0 0 15px;
    }
+
 }
 position: absolute;
 top: 0;
 left: 0;
 margin-right: -220px;
+@media (max-width: 1880px) {
+  margin-right: -100px;
+ }
 @media (max-width: 950px) {
-  margin-right: -40px;
+  margin-right: -20px;
   padding-right: 16px;
  }
+ @media (max-width: 474px) {
+  margin-right: 0;
+  padding-right: 0;
+ }
+
   .slick-slide {
     max-width: 466px;
     min-width: 322px;
@@ -289,8 +312,10 @@ margin-right: -220px;
     @media (max-width: 980px) {
      max-width: 322px;
      min-width: 220px;
+     margin-right: 36px;
     }
-    @media (max-width: 474px) {
+    @media (max-width: 550px) {
+      margin-right: 16px;
        img {
         width: 100%;
         height: 220px;
