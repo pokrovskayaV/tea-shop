@@ -1,0 +1,83 @@
+mixin mail(options={})
+ - const {title, text} = options
+  .mail
+    h3.mail__title=title
+    a.mail__text(href=`mailto:${text}`)=text
+
+mixin address(options={})
+ - const {title,number, text} = options
+  .partners__address
+    h3.address__title=title
+    a.address__number(href=`tel:${number}`)=number
+    p.address__text=text
+
+
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body
+    include blocks/header.pug  
+    .contacts
+      .contacts__bg._bg
+        img(src='img/contact-bg.jpg')
+      .contacts__container._container
+        .contacts__header-block
+          .contacts__breadcrumb.breadcrumb
+            ul.breadcrumb__list
+              li.breadcrumb__item
+                a(href="index.html").breadcrumb__link
+                  span.breadcrumb__home
+              li.breadcrumb__item
+                a(href="#").breadcrumb__link Контакты
+          .contacts__title-block.contacts__line
+            h1.contacts__title Контакты
+            p.contacts__subtitle 連絡先
+        .contacts__info
+          .info__tel-block.contacts__line
+            .info__tel
+              a(href="tel:+7421200000").info__number +7(4212) 00-00-00
+              span.info__office Главный офис (本社)
+            .info__text 
+              p.info__text_top Мы всегда открыты для сотрудничества и рады   новым интересным проектам. Свяжитесь с нами любым удобным для   вас способом.
+              p.info__text_bottom いつもご協力でき、新しいプロ<br class="_media3">ジェクトがあれば<br class="_media2">いつもご相談<br class="_media3">よろしくお<br class="_media1">願い  致します。最も<br class="_media3">便利<br class="_media2">な方法によりお問い合わせ<br class="_media3">くださ  い。
+          .info__mails.contacts__line
+            +mail({title:'Клиентам', text:'support@niiru.ru'})
+            +mail({title:'Для бизнеса', text:'business@niiru.ru'}) 
+            +mail({title:'Отдел продаж', text:'sale@niiru.ru'}) 
+          .info__map-block
+            .map-block__img
+              img(src="img/contacts-map.jpg", alt="")
+            .map-block__info
+              h2.map-block__title Главный офис
+              p.map-block__subtitle 本社
+              span.map-block__city Хабаровск
+              p.map-block__address ул. Муравьева-Амурского, 100 оф. 532,   680000
+        .contacts__bid.bid
+          .bid__bg
+          .bid__info
+            p.bid__name.name заявка
+            h2.bid__title.title Оставьте заявку на консультацию
+            p.bid__subtitle.subtitle 申し込みはこちら
+            .bid__text
+              p.bid__text_top Самый короткий путь к результату - заполнить   контактную форму. После этого мы свяжемся с вами и выполним ваш   проект вместе.
+              p.bid__text_bottom 結果を得る最短の方法は、お問い合わせフォームに記  入することです。 その後、私たちはあなたに連絡し、あなたのプロジェクト  を一緒に完了します。
+          form.bid__form.form(action="", method="post")
+            input.form__name(type="text" placeholder="Ваше имя")
+            input.form__email(type="email", name="" placeholder="E-mail"   required)
+            textarea.form__message(name="" placeholder="Ваше сообщение")
+            button.form__btn(type="submit") Оставить заявку
+        .contacts__partners.partners
+          .partners__map(data-da="partners__addresses,3,950")
+            img(src="img/partners-map.png", alt="", srcset="")
+          .partners__addresses
+            p.partners__name.name партнеры
+            h2.partners__title.title Адреса официальных представителей
+            p.partners__subtitle.subtitle 広報担当の住所
+            .partners__row.contacts__line
+              +address({title:'Владивосток', number:'+7 (000) 000-0000',text:'ул. Муравьева-Амурского, 100 оф. 532, 680000'})
+              +address({title:'Якутск', number:'+7 (000) 000-0000',text:'ул. Муравьева-Амурского, 100 оф. 532, 680000'})
+            .partners__row
+              +address({title:'Благовещенск', number:'+7 (000) 000-0000',text:'ул. Муравьева-Амурского, 100 оф. 532, 680000'})
+              +address({title:'Магадан', number:'+7 (000) 000-0000',text:'ул. Муравьева-Амурского, 100 оф. 532, 680000'})
+    include blocks/footer.pug  
+    include blocks/scripts.pug
