@@ -3,31 +3,11 @@
   padding: 0;
   list-style: none;
 }
-.uk-switcher > :not(.uk-active) {
-  display: none;
-}
 
-.uk-switcher > * > :last-child {
-  margin-bottom: 0;
-}
-.uk-tab > * {
-  flex: none;
-  position: relative;
-}
 
-.uk-tab > * > a {
-  display: block;
-  transition: color 0.1s ease-in-out;
-}
-
-.uk-tab {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-} 
 .uk-active .catalog-list__tab, .uk-active .info__tab {
-    border-bottom: 6px solid #23C653;
-  }
+  border-bottom: 6px solid #23C653;
+}
 
   .uk-breadcrumb {
     display: flex;

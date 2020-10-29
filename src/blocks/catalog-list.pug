@@ -13,55 +13,45 @@ mixin item(options={})
 
 
 .main__catalog._container
-  .catalog-list
-    ul(class="uk-tab" data-uk-tab="{connect:'#catalog'}")
-      li 
-        a(href="#").catalog-list__tab
-          p.catalog-list__title Сенча
-          span.catalog-list__text 煎茶
-      li 
-        a(href="#").catalog-list__tab
-          p.catalog-list__title Ходзича
-          span.catalog-list__text ほうじ茶
-      li 
-        a(href="#").catalog-list__tab
-          p.catalog-list__title Генмайча
-          span.catalog-list__text 玄米茶
-      li 
-        a(href="#").catalog-list__tab
-          p.catalog-list__title Вакоча
-          span.catalog-list__text 和紅茶
-      li 
-        a(href="#").catalog-list__tab
-          p.catalog-list__title Матча
-          span.catalog-list__text 沼津抹茶
-    ul(id="catalog" class="uk-switcher" )
-      li 
-        .catalog-list__items.items
+  .tabs
+    div(class="tabs__nav")
+      .tabs__link._active(data-value="1") Сенча
+        span.tabs__text 煎茶
+      .tabs__link(data-value="2") Ходзича
+        span.tabs__text ほうじ茶
+      .tabs__link(data-value="3")  Генмайча
+        span.tabs__text 玄米茶
+      .tabs__link(data-value="4")  Вакоча
+        span.tabs__text 和紅茶
+      .tabs__link(data-value="5")  Матча
+        span.tabs__text 沼津抹茶
+    ul(class="tabs__content")
+      li(class="tab tab--1 active")
+        .tabs__items.items
           +item({src:'../img/products/prod1.png',weight:'100г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
-      li
-        .catalog-list__items.items
+      li(class="tab tab--2 ")
+        .tabs__items.items
           +item({src:'../img/products/prod1.png',weight:'200г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
-      li
-        .catalog-list__items.items
+      li(class="tab tab--3")
+        .tabs__items.items
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
-      li 
-        .catalog-list__items.items
+      li(class="tab tab--4")
+        .tabs__items.items
           +item({src:'../img/products/prod1.png',weight:'400г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
-      li
-        .catalog-list__items.items
+      li(class="tab tab--5")
+        .tabs__items.items
           +item({src:'../img/products/prod1.png',weight:'500г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
           +item({src:'../img/products/prod1.png',weight:'300г.', price:'800 ₽'})
