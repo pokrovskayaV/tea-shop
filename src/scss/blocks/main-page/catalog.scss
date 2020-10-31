@@ -73,6 +73,7 @@
         color: #505565;
         display: block;
         padding-bottom: 33px;
+        cursor: pointer;
         @media (max-width: 1490px) {
         font-size: 24px;
         line-height: 36px; 
@@ -196,6 +197,11 @@
 
 .tabs__link:first-child {
   position: relative;
+  &._active {
+    &::after {
+      bottom: -6px;
+    }
+  }
   &::after {
     @media (max-width: 550px) {
     content: "";

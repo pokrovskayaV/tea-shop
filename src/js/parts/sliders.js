@@ -1,6 +1,6 @@
 let initSlidersMain = () => {
   $(".js__slider").slick({
-  variableWidth: true,
+  infinite: true,
   lazyLoad: 'ondemand',
   arrows: true,
   dots: true,
@@ -33,9 +33,6 @@ let initSlidersItem = () => {
 };
 
 let initSliderNews = () => {
-  $(".js__slider-news").on('init', function(){
-    
-  });
   $(".js__slider-news").slick({
     lazyLoad: 'ondemand',
     infinite: false,
