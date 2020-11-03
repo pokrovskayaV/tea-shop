@@ -5,9 +5,11 @@ flex: 1 0 auto;
 .info-block {
 margin: 0;
 max-width: 450px;
+
 @media (max-width: 1490px) {
   max-width: 320px;
 }
+
 @media (max-width: 767px) {
  max-width: 98%;
 }
@@ -30,10 +32,12 @@ font-size: 56px;
 line-height: 66px;
 color: #28293D;
 margin: 10px 0 27px 0;
+
 @media (max-width: 1490px) {
   font-size: 40px;
   line-height: 47px;
 }
+
 @media (max-width: 474px) {
   font-size: 32px;
 line-height: 38px;
@@ -46,10 +50,12 @@ font-size: 40px;
 line-height: 47px;
 color: #8E90A6;
 white-space: nowrap; 
+
 @media (max-width: 1490px) {
   font-size: 32px;
 line-height: 38px;
 }
+
 @media (max-width: 474px) {
   font-size: 20px;
 line-height: 24px;

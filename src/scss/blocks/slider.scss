@@ -2,6 +2,7 @@
 .slider {
 margin-top: -184px;
 z-index: 0;
+width: 100vw;
 position: relative;
 overflow: hidden;
 @media (max-width: 950px) {
@@ -11,8 +12,10 @@ overflow: hidden;
   width: 100vw;
   position: relative;
   img {
+  width: 100%;
   object-fit: cover;
-}
+  height: 840px;
+ }
   @media (max-width: 950px) {
   max-height: 730px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
