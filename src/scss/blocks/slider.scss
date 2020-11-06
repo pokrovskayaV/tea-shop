@@ -378,3 +378,25 @@ margin-right: -220px;
   border: none;
   outline: none;
 }
+
+
+//Слайдер-табы
+.tabs {
+  .slick-list {
+    min-width: 100% !important;
+  }
+  
+  .slick-track {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin: 0;
+  &:before, &:after {
+    display: none;
+  }
+  }
+  &__nav {
+    .slick-current {
+      border-bottom: 6px solid #23C653;
+    }
+  }
+}
