@@ -1,0 +1,104 @@
+include blocks/mixins.pug
+
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body.about-page
+    include blocks/header.pug  
+    .about
+      .about__bg._bg
+        img(src='img/about-bg.jpg')
+      .about__container._container
+        .about__header-block
+          +breadcrumb('О компании')
+          +title-block('О компании', '会社概要')
+        .about__info-block.info-block
+          .info-block__left
+            .info-block__subtitle о нас
+            .info-block__title Японские принципы торговли и бизнеса
+            .info-block__descr 日本の商業やビジネスの原則
+          .info-block__right
+            p.info-block__text-top Компания «Нийру» является торговой компанией, базирующейся в Токио, Япония.   Основным направлением деятельности компании является экспорт оригинальной японской продукции на   рынки стран СНГ.
+            p.info-block__text-bottom ニール有限会社は、日本、東京にある<br class="_media3">商社です。弊社の主<br class="_media1">な専門<br class="_media2">は、オリジ<br class="_media3">ナル日本製商品をCISの市場に輸出す<br class="_media3">る<br class="_media1">ことです。
+        .about__activities-block
+          .about__title-block
+            p.about__name.name чем мы занимаемся
+            h2.about__title.title Наша деятельность
+            p.about__subtitle.subtitle 弊社の活動
+          .about__activities
+            +activitiy('01','Торговля готовой продукцией','既製品の販売','img/activity1.png')
+            +activitiy('02','Помощь в сотрудничестве с Японскими компаниями','日本の会社との<br>協力における支援','img/activity2.png')
+            +activitiy('03','Импорт и экспорт с Россией и странами СНГ','ロシア連邦やCISとの輸出や輸入','img/activity3.png')
+        .about__work-block
+          .about__title-block
+            p.about__name.name как мы работаем
+            h2.about__title.title Отлаженный процесс работы
+            p.about__subtitle.subtitle スムーズな仕事の過程
+          .about__stages
+            +stage('01','Запрос','Заявка на email или через звонок','Eメールか携帯電話を<br>通じて申し込む')
+            +stage('02','Расчет','Расчет коммерческого предложения','オファーの計算')
+            +stage('03','Согласование','Согласование заказа и условий оплаты','注文の承認や<br>支払条件')
+            +stage('04','Обработка заказа','Обработка и подготовка продукции','製品の加工や用意')
+            +stage('05','Доставка','Передача готовой продукции заказчику','お客様に用意できた<br>製品を納品')
+        .about__director.director
+          .director__bg
+            img(src="img/director-bg.png", alt="")
+          .director__info-block
+            p.director__text-top Мы продолжим решать сложные задачи и работать над тем, чтобы превзойти ведущих игроков в сферах бизнеса и на рынках по всему миру, стремясь стать настоящей глобальной компанией, вносящей свой вклад как в региональную экономику, так и в общество.
+            p.director__text-bottom 今後も大きな挑戦を重ね、世界の事業分野<br class='_media3'>や市場のトップ<br class='_media1'>プレーヤーを凌駕し、地域経<br class='_media3'>済と社会の両方に貢献する真<br class='_media1'>のグローバ<br class='_media3'>ル企業を目指していきます。
+            .director__descr
+              h3.director__name Идэ Хидэнобу
+                span.director__name_bottom イデ・ヒデノブ
+              p.director__position Основатель, Генеральный директор
+                span.director__position_bottom 設立者、社長
+          .director__photo
+            img(src="img/director.jpg", alt="")
+        .about__partners.partners
+          .partners__bg
+          .partners__top-content
+            .partners__info-block
+              p.about__name.name._white партнерство
+              h2.about__title.title._white Наш опыт сотрудничества
+              p.about__subtitle.subtitle._white 協力経験
+            .partners__text-block
+              p.partners__text-block_top._white За время работы нашими клиентами и партнерами стали крупнейшие оптовые и розничные   предприятия     Дальнего Востока
+              span.partners__text-block_bottom._white 業務期間内、ロシア極東の大手の卸売、<br class='_media3'>小売企業が弊社の顧<br class="_media2">客<br class="_media1">又  パー    トナーになってきました。
+              .partners__facts-block
+                .partners__fact-block
+                  .fact-block__number 12
+                  .fact-block__title Партнеров на постоянной основе
+                  .fact-block__subtitle いつものパートナー
+                .partners__fact-block
+                  span.fact-block__number 2,000+
+                  p.fact-block__title Единиц товара в обороте ежедневно
+                  .fact-block__subtitle 毎日流通している<br>商品の単位
+          .partners__offer.offer
+            .offer__wrapper
+              .offer__bg 
+                img(src="img/about-partners.jpg", alt="")
+              .offer__title Предложения для партнеров
+              .offer__text パートナー向けのオファー
+              a(href="#").offer__btn Предложения
+                span
+          .partners__logo
+            .partners__img
+              img(src="../img/logo/logo-burger.png", alt="", srcset="")
+            .partners__img
+              img(src="../img/logo/logo-otkr.png", alt="", srcset="")
+            .partners__img
+              img(src="../img/logo/logo-sber.png", alt="", srcset="")
+            .partners__img
+              img(src="../img/logo/logo-voentorg.png", alt="", srcset="")
+            .partners__img
+              img(src="../img/logo/logo-vtb.png", alt="", srcset="")
+        .about__connects.connect
+            .connect__info
+              p.connect__title Контакты
+              p.connect__subtitle 連絡先
+              p.connect__text_top Свяжитесь с нами и узнайте о нас подробнее
+              p.connect__text_bottom 弊社の詳しい情報がこちらで<br>お問い合わせします。
+              a(href="contact.html").connect__btn Контакты
+                span
+            .connect__img 
+              img(src="img/about-contact.jpg", alt="")
+    include blocks/footer.pug

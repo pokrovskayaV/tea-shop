@@ -1,17 +1,5 @@
-mixin mail(options={})
- - const {title, text} = options
-  .mail
-    h3.mail__title=title
-    a.mail__text(href=`mailto:${text}`)=text
-
-mixin address(options={})
- - const {title,number, text} = options
-  .partners__address
-    h3.address__title=title
-    a.address__number(href=`tel:${number}`)=number
-    p.address__text=text
-
-
+include blocks/mixins.pug
+  
 doctype html
 html(lang="ru")
   include blocks/head.pug
@@ -22,16 +10,8 @@ html(lang="ru")
         img(src='img/contact-bg.jpg')
       .contacts__container._container
         .contacts__header-block
-          .contacts__breadcrumb.breadcrumb
-            ul.breadcrumb__list
-              li.breadcrumb__item
-                a(href="index.html").breadcrumb__link
-                  span.breadcrumb__home
-              li.breadcrumb__item
-                a(href="#").breadcrumb__link Контакты
-          .contacts__title-block.contacts__line
-            h1.contacts__title Контакты
-            p.contacts__subtitle 連絡先
+          +breadcrumb('Контакты')
+          +title-block('Контакты', '連絡先')
         .contacts__info
           .info__tel-block.contacts__line
             .info__tel

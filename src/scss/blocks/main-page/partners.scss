@@ -46,20 +46,26 @@
     @media (max-width: 474px) {
      display: none;
     }
-    p {
+    &_top {
       font-size: 20px;
       line-height: 150%;
       color: #555770;
       @media (max-width: 1490px) {
         font-size: 18px;
       }
+      &._white {
+        color: #fff;
+      }
     }
-    span {
+    &_bottom {
       font-size: 18px;
       line-height: 150%;
       color: #8E90A6;
       white-space: nowrap;
-      br._media2 {
+      &._white {
+        color: #C7C8D9;
+      }
+      br._media2,br._media3  {
         display: none;
       }
       @media (max-width: 1490px) {
@@ -70,6 +76,11 @@
           display: block;
         }
         font-size: 16px;
+      }
+      @media (max-width: 474px) {
+        br._media3 {
+          display: block;
+        }
       }
     }
   }
